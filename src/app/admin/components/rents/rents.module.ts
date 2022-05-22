@@ -11,7 +11,7 @@ import { AdminModule } from '../../admin.module';
 
 @NgModule({
   declarations: [
-    
+    RentsComponent
     //FooterComponent,
     //HeaderComponent
     

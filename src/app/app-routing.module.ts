@@ -22,7 +22,8 @@ const routes: Routes = [
       path:"", component:AnasayfaComponent, children:[
         {path:"", component:HomeComponent},
         {path:"profile",loadChildren:()=>import("./ui/components/profile/profile.module").then(module=>module.ProfileModule)},
-        {path:"cars",loadChildren:()=>import("./ui/components/cars/cars.module").then(module=>module.CarsModule)}
+        {path:"cars",loadChildren:()=>import("./ui/components/cars/cars.module").then(module=>module.CarsModule)},
+        {path:"login",loadChildren:()=>import("./ui/components/login/login.module").then(module=>module.LoginModule)}
       ]
     }
    
