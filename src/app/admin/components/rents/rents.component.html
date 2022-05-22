@@ -1,4 +1,21 @@
-admin rents sayfası
+<table>
+    <tr>
+        <th>Id</th>
+        <th>UserId</th>
+        <th>CarId</th>
+        <th>rentdate</th>
+        <th>returndate</th>
+        <th>price</th>
+        <th></th>
 
-<a routerLink="/admin/cars">admin cars</a>
-<router-outlet></router-outlet>
+    </tr>
+    <tr *ngFor="let rent of rents">
+        <td>{{rent.id}}</td>
+        <td>{{rent.userId}}</td>
+        <td>{{rent.carId}}</td>
+        <td>{{rent.rentDate}}</td>
+        <td>{{rent.returnDate}}</td>
+        <td>{{rent.price}}</td>
+        <td><button>Sil</button></td>
+    </tr>
+</table>

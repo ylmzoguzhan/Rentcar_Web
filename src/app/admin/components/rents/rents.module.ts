@@ -23,6 +23,9 @@ import { AdminModule } from '../../admin.module';
     ]),
     
   ],
+  exports:[
+    RentsComponent
+  ]
 
 })
 export class RentsModule { }

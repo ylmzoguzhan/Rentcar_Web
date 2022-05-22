@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AnasayfaComponent } from './anasayfa.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from './components/components.module';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -14,7 +14,8 @@ import { ComponentsModule } from './components/components.module';
   imports: [
     CommonModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    MatSidenavModule
   ],
   exports:[
     AnasayfaComponent
