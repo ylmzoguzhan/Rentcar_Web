@@ -1,11 +1,18 @@
-td{
-    margin: 20px;
-}
+
 .container{
-    height: 100%;
     padding: 30px;
 }
 
 table, th, td {
     border: 1px solid;
+  }
+
+  table{
+    border-collapse: collapse;
+  }
+
+  td {
+    width: 100px;
+    vertical-align: bottom;
+    text-align: center;
   }

@@ -15,4 +15,5 @@ export class CarService {
     let newPath = this.apiUrl+"getall";
     return this.httpClient.get<ListResponseModel<CarModel>>(newPath);
   }
+
 }

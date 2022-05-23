@@ -1,0 +1,21 @@
+td{
+    margin: 20px;
+}
+.container{
+    padding: 30px;
+}
+
+table, th, td {
+    border: 1px solid;
+  }
+
+  table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td {
+    width: 100px;
+    vertical-align: bottom;
+    text-align: center;
+  }

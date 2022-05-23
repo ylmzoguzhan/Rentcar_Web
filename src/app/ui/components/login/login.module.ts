@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import {MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 
 
@@ -17,14 +16,10 @@ import {MatCardModule} from '@angular/material/card';
       {path:"",component:LoginComponent}
     ]),
     FormsModule,
-    MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
   ],
   exports:[
     LoginComponent
   ],
-  providers: [
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
-  ]
 })
 export class LoginModule { }
