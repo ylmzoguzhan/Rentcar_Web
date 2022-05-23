@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { carImageModel } from 'src/app/models/carImageModel';
 import { CarModel } from 'src/app/models/carModel';
 import { CarImageService } from 'src/app/services/car-image.service';
@@ -12,30 +12,37 @@ import { CarService } from 'src/app/services/car.service';
 export class CarsComponent implements OnInit {
   cars:CarModel[]
   carImages:carImageModel[]
+  
   constructor(private carService:CarService, private carImageService:CarImageService) { }
 
   ngOnInit(): void {
     this.getCars();
-    this.getByCarId();
+    this.getAll();
   }
-
+  	
+  
   getCars(){
     this.carService.getAll().subscribe(response=>{
+      console.log(response.data)
       this.cars = response.data
     })
   }
 
-  getByCarId() {
-    this.carImageService.getByCarId(1).subscribe(response => {
+  getByCarId(id:number) {
+    this.carImageService.getByCarId(id).subscribe(response => {
+      this.carImages = response.data
+    })
+  }
+
+  getAll(){
+    this.carImageService.getAll().subscribe(response=>{
       console.log(response.data)
       this.carImages = response.data
     })
   }
 
-  getImage(carImage: carImageModel) {
-    if(carImage)
-    return "https://localhost:44312/" + carImage.imagePath
-    else
-    return ""
+  carIdSetLocal(id:number){
+    localStorage.setItem("detailadmincar",id.toString())
   }
+
 }

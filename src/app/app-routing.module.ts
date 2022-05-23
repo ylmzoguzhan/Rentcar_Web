@@ -15,7 +15,8 @@ const routes: Routes = [
         { path: "", component: DashboardComponent },
         { path: "rents", loadChildren: () => import("./admin/components/rents/rents.module").then(module => module.RentsModule) },
         {path:"cars", loadChildren: ()=> import("./admin/components/cars/cars.module").then(module=>module.CarsModule)},
-        {path:"users", loadChildren: ()=> import("./admin/components/users/users.module").then(module=>module.UsersModule)}
+        {path:"users", loadChildren: ()=> import("./admin/components/users/users.module").then(module=>module.UsersModule)},
+        {path:"cardetails", loadChildren: ()=> import("./admin/components/cardetails/cardetails.module").then(module=>module.CardetailsModule)},
       ]
   },
    

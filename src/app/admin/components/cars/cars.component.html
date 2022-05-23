@@ -12,6 +12,7 @@
         <th>rent</th>
         <th>lat</th>
         <th>lng</th>
+        <th></th>
     </tr>
     <tr *ngFor="let car of cars">
         <td>{{car.id}}</td>
@@ -25,11 +26,9 @@
         <td>{{car.rent}}</td>
         <td>{{car.lat}}</td>
         <td>{{car.lng}}</td>
+        <td><a routerLink="/admin/cardetails" (click)="carIdSetLocal(car.id)">Detay</a> </td>
         </tr>
     </table>
     
-    <ul>
-        <li><img [src]="getImage(carImages[1])" alt=""></li>
-    </ul>
 </div>
 

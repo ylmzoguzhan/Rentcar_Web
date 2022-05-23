@@ -16,3 +16,8 @@ table, th, td {
     vertical-align: bottom;
     text-align: center;
   }
+  
+  td img{
+    width: 100%;
+    height: 100%;
+  }

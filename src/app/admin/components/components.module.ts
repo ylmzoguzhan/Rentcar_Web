@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CarsModule } from './cars/cars.module';
 import { UsersModule } from './users/users.module';
+import { CardetailsModule } from './cardetails/cardetails.module';
 
 
 
@@ -15,13 +16,15 @@ import { UsersModule } from './users/users.module';
     RentsModule,
     DashboardModule,
     CarsModule,
-    UsersModule
+    UsersModule,
+    CardetailsModule
   ],
   exports:[
     RentsModule,
     DashboardModule,
     CarsModule,
-    UsersModule
+    UsersModule,
+    CardetailsModule
   ]
 })
 export class ComponentsModule { }
