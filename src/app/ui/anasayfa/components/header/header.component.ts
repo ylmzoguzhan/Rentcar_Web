@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  token=false
   constructor() { }
 
   ngOnInit(): void {
+    let token = localStorage.getItem("token")
+    if(token==null){
+      this.token=false
+    }else{
+      this.token=true
+    }
   }
 
 }

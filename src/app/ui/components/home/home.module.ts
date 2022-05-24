@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { Router, RouterModule } from '@angular/router';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -13,7 +17,11 @@ import { MatSliderModule } from '@angular/material/slider';
     RouterModule.forChild([
       {path:"",component:HomeComponent}
     ]),
-    MatSliderModule
+    MatSliderModule,
+    MatCardModule,
+    MatListModule,
+    MatStepperModule,
+    MatIconModule
   ],
   exports:[
     HomeComponent

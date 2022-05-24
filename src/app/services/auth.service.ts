@@ -22,4 +22,11 @@ export class AuthService {
     let newPath = this.apiUrl+"register";
     return this.httpClient.post<SingleResponseModel<TokenModel>>(newPath,registerModel);
   }
+  isAuthenticated(){
+    if(localStorage.getItem("token")){
+      return true;
+    }else{
+      return false;
+    } 
+  }
 }

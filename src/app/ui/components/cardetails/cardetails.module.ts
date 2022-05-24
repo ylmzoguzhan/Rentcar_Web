@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardetailsComponent } from './cardetails.component';
 import { RouterModule } from '@angular/router';
-
-import { NgxFileDropModule } from 'ngx-file-drop';
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -11,10 +11,11 @@ import { NgxFileDropModule } from 'ngx-file-drop';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild([
-      {path:"", component:CardetailsComponent}
-    ]),
-    NgxFileDropModule
+    RouterModule.forChild([{
+      path:"",component:CardetailsComponent
+    }]),
+    MatButtonModule,
+    MatListModule
   ],
   exports:[
     CardetailsComponent

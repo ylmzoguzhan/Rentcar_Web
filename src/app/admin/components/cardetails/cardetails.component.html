@@ -1,5 +1,7 @@
-{{carDetail.model}}
+<p *ngIf="carDetail">{{carDetail.model}}</p>
 
-<ul>
-    <li *ngFor="let image of carImages"><img [src]="newPath(image)" alt=""></li>
+
+<ul *ngIf="carImages">
+    <li  *ngFor="let image of carImages"><img [src]="newPath(image)" alt=""></li>
 </ul>
+

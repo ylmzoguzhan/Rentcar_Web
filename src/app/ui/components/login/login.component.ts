@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginModel } from 'src/app/models/loginModel';
 import { AuthService } from 'src/app/services/auth.service';
 
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
     tc:"",
     password:""
   }
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthService, private route:Router) { }
 
   ngOnInit(): void {
     
@@ -21,7 +22,10 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.authService.login(this.loginModel).subscribe(response=>{
-      console.log(response.data)
+      localStorage.setItem("tc",this.loginModel.tc)
+      console.log(response)
+      localStorage.setItem("token",response.data.token)
+      window.location.reload();
     })
   }
 }

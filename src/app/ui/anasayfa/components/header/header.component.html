@@ -6,8 +6,8 @@
       <span> <a routerLink="">Rentcar</a> </span>
       <span class="example-spacer"></span>
       <div class="right">
-      <a routerLink="login">login</a> 
-      <a routerLink="register">register</a> 
+      <a  *ngIf="token==false" routerLink="login">login</a> 
+      <a  *ngIf="token==false" routerLink="register">register</a> 
     </div>
     </mat-toolbar-row>
   </mat-toolbar>

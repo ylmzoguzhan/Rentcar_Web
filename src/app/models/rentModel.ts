@@ -1,5 +1,5 @@
 export interface RentModel {
-    id: number;
+    id?: number;
     userId: number;
     carId: number;
     rentDate: Date;

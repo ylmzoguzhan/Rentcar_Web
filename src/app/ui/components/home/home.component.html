@@ -1,3 +1,17 @@
-FİLTRELEME
-<hr>
-araba listesi
+<h1 *ngIf="token==false">LÜTFEN GİRİŞ YAPINIZ</h1>
+<div *ngIf="token">
+<mat-selection-list  [multiple]="false">
+    
+        <mat-list-option *ngFor="let car of cars">
+            <mat-card (click)="selectCar(car)" routerLink="/cardetails">
+                <div class="left">
+                    {{car.model}}
+                </div>
+                <div class="right">
+                    Günlük ücret: {{car.dailyPrice}}
+                </div>
+            </mat-card>
+        </mat-list-option>
+
+</mat-selection-list>
+</div>

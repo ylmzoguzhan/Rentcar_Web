@@ -1,0 +1,18 @@
+img{
+    height: 200px;
+    width: 200px;
+}
+li{
+    list-style: none;
+    display: inline-block;
+}
+ul{
+    position: absolute;
+    bottom: 0px;
+}
+
+.rent{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}

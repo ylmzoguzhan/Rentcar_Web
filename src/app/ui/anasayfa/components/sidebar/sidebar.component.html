@@ -1,13 +1,8 @@
 <div class="left">
-<a routerLink="">Anasayfa</a>
+<a *ngIf="token" routerLink="profile">Profil</a>
 <br>
 <br>
 <br>
 <br>
-<a routerLink="profile">Profil</a>
-<br>
-<br>
-<br>
-<br>
-
+<a *ngIf="token" routerLink="" (click)="exit()">Çıkış</a>
 </div>

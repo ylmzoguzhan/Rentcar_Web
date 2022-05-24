@@ -1,1 +1,18 @@
-login page
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+            <mat-toolbar color="primary">Giriş Sayfası</mat-toolbar>
+        <div fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field>
+              <mat-label>TC</mat-label>
+              <input type="text" [(ngModel)]="loginModel.tc"  matInput placeholder="TC">
+            </mat-form-field>
+          
+            <mat-form-field >
+                <mat-label>Şifre</mat-label>
+                <input type="password" [(ngModel)]="loginModel.password" matInput placeholder="Password">
+              </mat-form-field>
+              <button mat-raised-button type="submit"  (click)="login()">Giriş</button>
+            </div>
+          
+    </mat-card>
+</div>

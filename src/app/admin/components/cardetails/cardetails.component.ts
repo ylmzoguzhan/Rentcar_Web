@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FileSystemFileEntry, NgxFileDropEntry } from 'ngx-file-drop';
+import { CarImageAddModel } from 'src/app/models/carImageAddModel';
 import { carImageModel } from 'src/app/models/carImageModel';
 import { CarModel } from 'src/app/models/carModel';
 import { CarImageService } from 'src/app/services/car-image.service';
@@ -13,6 +15,8 @@ export class CardetailsComponent implements OnInit {
   selectedCarId:number
   carDetail:CarModel
   carImages:carImageModel[]
+  public files: NgxFileDropEntry[] = [];
+  addImage:CarImageAddModel[]
   constructor(private carService:CarService, private carImageService:CarImageService) { }
 
   ngOnInit(): void {
@@ -36,4 +40,10 @@ export class CardetailsComponent implements OnInit {
     return "https://localhost:44312/" + imageModel.imagePath
   }
 
+
+  /////////////////////////////////////GÖRSEL EKLE
+
+deneme(){
+  console.log("sss")
+}
 }
