@@ -46,7 +46,10 @@ export class PayComponent implements OnInit {
     this.rentModel.price = this.selectCar.dailyPrice
   }
     this.rentService.add(this.rentModel).subscribe(response=>{
-      console.log(response)
+      this.selectCar.rent = true
+      this.carService.updateRent(this.selectCar).subscribe(response=>{
+        console.log(response)
+      })
     })
     alert("Kiralandı")
   }

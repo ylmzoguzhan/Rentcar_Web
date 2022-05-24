@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarDetailsModel } from 'src/app/models/carDetailsModel';
 import { CarModel } from 'src/app/models/carModel';
 import { CarService } from 'src/app/services/car.service';
 
@@ -9,7 +10,7 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class HomeComponent implements OnInit {
   token:boolean;
-  cars:CarModel[]
+  cars:CarDetailsModel[]
   constructor(private carService:CarService) { }
 
   ngOnInit(): void {
@@ -19,16 +20,16 @@ export class HomeComponent implements OnInit {
   }else{
     this.token = false
   }
-  this.getCars()
+  this.getCarDetails()
   }
 
-  getCars(){
-    this.carService.getAll().subscribe(response=>{
+  getCarDetails(){
+    this.carService.getCarDetailsByRent().subscribe(response=>{
       this.cars = response.data
     })
   }
 
-  selectCar(car:CarModel){
-   localStorage.setItem("detailuicar",car.id.toString()) 
+  selectCar(car:CarDetailsModel){
+   localStorage.setItem("detailuicar",car.carId.toString()) 
   }
 }

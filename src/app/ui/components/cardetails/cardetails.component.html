@@ -9,4 +9,11 @@
 <ul>
     <li *ngFor="let image of images"><img [src]="newPath(image)" alt=""></li>
 </ul>
+
+Konum
 <button mat-stroked-button color="primary" (click)="rent()" routerLink="/pay" class="rent">Kirala</button>
+
+<agm-map [zoom]="18" [latitude]="lat" [longitude]="lng"  >
+    <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+  </agm-map>
+

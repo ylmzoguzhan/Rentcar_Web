@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
+import { RentDetailsModel } from '../models/rentDetailsModel';
 import { RentModel } from '../models/rentModel';
 import { ResponseModel } from '../models/responseModel';
 
@@ -22,5 +23,13 @@ export class RentService {
   add(rentModel:RentModel):Observable<ResponseModel>{
     let newPath = this.apiUrl+"add"
     return this.httpClient.post<ResponseModel>(newPath,rentModel)
+  }
+  getAllDetails():Observable<ListResponseModel<RentDetailsModel>>{
+    let newPath = this.apiUrl+"getallrentdetails"
+    return this.httpClient.get<ListResponseModel<RentDetailsModel>>(newPath)
+  }
+  getAllDetailsByUserId(id:number):Observable<ListResponseModel<RentDetailsModel>>{
+    let newPath = this.apiUrl+"getrentdetailsbyuserid?id="+id
+    return this.httpClient.get<ListResponseModel<RentDetailsModel>>(newPath)
   }
 }

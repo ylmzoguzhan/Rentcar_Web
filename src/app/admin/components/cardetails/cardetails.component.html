@@ -1,7 +1,23 @@
 <p *ngIf="carDetail">{{carDetail.model}}</p>
 
 
+
 <ul *ngIf="carImages">
     <li  *ngFor="let image of carImages"><img [src]="newPath(image)" alt=""></li>
 </ul>
 
+
+<agm-map [zoom]="18" [latitude]="lat" [longitude]="lng"  >
+    <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+  </agm-map>
+
+
+
+
+
+
+   
+
+
+  
+      

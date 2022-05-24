@@ -12,12 +12,16 @@ import { CarService } from 'src/app/services/car.service';
 export class CardetailsComponent implements OnInit {
   selectCar:CarModel
   images:carImageModel[]
+  lat:number
+  lng:number
   constructor(private carService:CarService,private imageServer:CarImageService) { }
 
   ngOnInit(): void {
     let carId = Number(localStorage.getItem("detailuicar"))
     this.carService.getById(carId).subscribe(response=>{
       this.selectCar = response.data
+      this.lat = this.selectCar.lat
+      this.lng = this.selectCar.lng
       this.getImages(response.data.id)
     })
   }

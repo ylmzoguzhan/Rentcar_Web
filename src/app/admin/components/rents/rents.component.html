@@ -1,9 +1,8 @@
 <div class="container">
 <table>
     <tr>
-        <th>Id</th>
-        <th>UserId</th>
-        <th>CarId</th>
+        <th>Kiralayan</th>
+        <th>Model</th>
         <th>rentdate</th>
         <th>returndate</th>
         <th>price</th>
@@ -11,9 +10,8 @@
 
     </tr>
     <tr *ngFor="let rent of rents">
-        <td>{{rent.id}}</td>
-        <td>{{rent.userId}}</td>
-        <td>{{rent.carId}}</td>
+        <td>{{rent.userName}}</td>
+        <td>{{rent.model}}</td>
         <td>{{rent.rentDate}}</td>
         <td>{{rent.returnDate}}</td>
         <td>{{rent.price}}</td>

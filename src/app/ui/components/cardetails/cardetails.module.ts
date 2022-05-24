@@ -4,6 +4,7 @@ import { CardetailsComponent } from './cardetails.component';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,10 @@ import {MatListModule} from '@angular/material/list';
       path:"",component:CardetailsComponent
     }]),
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    AgmCoreModule.forRoot({
+      apiKey: ' ',
+    })
   ],
   exports:[
     CardetailsComponent

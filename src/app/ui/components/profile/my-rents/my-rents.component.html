@@ -1,12 +1,14 @@
 <table>
     <tr>
-        <th>UserId</th>
-        <th>CarId</th>
-        <th>Price</th>
+        <th>Model</th>
+        <th>Kiralama tarihi</th>
+        <th>Kiralama bitiş tarihi</th>
+        <th>Ücret</th>
     </tr>
     <tr *ngFor="let rent of myRents ">
-        <td>{{rent.userId}}</td>
-        <td>{{rent.carId}}</td>
+        <td>{{rent.model}}</td>
+        <td>{{rent.rentDate}}</td>
+        <td>{{rent.returnDate}}</td>
         <td>{{rent.price}}</td>
-    </tr>
+</tr>
 </table>

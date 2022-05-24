@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RentDetailsModel } from 'src/app/models/rentDetailsModel';
 import { RentModel } from 'src/app/models/rentModel';
 import { UserModel } from 'src/app/models/userModel';
 import { RentService } from 'src/app/services/rent.service';
@@ -11,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class MyRentsComponent implements OnInit {
   user:UserModel
-  myRents:RentModel[]
+  myRents:RentDetailsModel[]
   tc:string
   constructor(private userService:UserService, private rentService:RentService) { }
 
@@ -32,7 +33,7 @@ export class MyRentsComponent implements OnInit {
   }
   getMyRents(id:number){
     
-    this.rentService.getAllById(id).subscribe(response=>{
+    this.rentService.getAllDetailsByUserId(id).subscribe(response=>{
       this.myRents = response.data
     })
   }

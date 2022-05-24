@@ -4,7 +4,8 @@
     
         <mat-list-option *ngFor="let car of cars">
             <mat-card (click)="selectCar(car)" routerLink="/cardetails">
-                <div class="left">
+                <div class="left" >
+                    {{car.brand}}
                     {{car.model}}
                 </div>
                 <div class="right">
