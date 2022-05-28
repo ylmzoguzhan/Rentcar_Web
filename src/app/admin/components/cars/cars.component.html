@@ -2,8 +2,7 @@
     <table>
     <tr>
         <th>Id</th>
-        <th>UserId</th>
-        <th>BrandId</th>
+        <th>Markası</th>
         <th>MODEL</th>
         <th>Year</th>
         <th>capacity</th>
@@ -12,21 +11,22 @@
         <th>rent</th>
         <th>lat</th>
         <th>lng</th>
+        <th>düzenle</th>
         <th></th>
     </tr>
-    <tr *ngFor="let car of cars">
-        <td>{{car.id}}</td>
-        <td>{{car.userId}}</td>
-        <td>{{car.brandId}}</td>
+    <tr *ngFor="let car of carDetails">
+        <td>{{car.carId}}</td>
+        <td>{{car.brand}}</td>
         <td>{{car.model}}</td>
         <td>{{car.year}}</td>
         <td>{{car.capacity}}</td>
-        <td>{{car.gearId}}</td>
+        <td>{{car.gear}}</td>
         <td>{{car.dailyPrice}}</td>
         <td>{{car.rent}}</td>
         <td>{{car.lat}}</td>
         <td>{{car.lng}}</td>
-        <td><a routerLink="/admin/cardetails" (click)="carIdSetLocal(car.id)">Detay</a> </td>
+        <td><a routerLink="/admin/cardetails" (click)="carIdSetLocal(car.carId)">Detay</a> </td>
+        <td><a routerLink="/admin/carEdit">Güncelle</a></td>
         </tr>
     </table>
     

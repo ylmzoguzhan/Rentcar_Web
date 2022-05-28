@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Ad</span>
+            <input type="text" [(ngModel)]="registerModel.firstName"  placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Soyad</span>
+            <input type="text" [(ngModel)]="registerModel.lastName" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">TC</span>
+            <input type="text" [(ngModel)]="registerModel.tc" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" [(ngModel)]="registerModel.telNo" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" [(ngModel)]="registerModel.password" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" (click)="register()" value="Register">
+        </div>
+    </div>
+  </div>

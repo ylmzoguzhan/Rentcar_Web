@@ -25,7 +25,9 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("tc",this.loginModel.tc)
       console.log(response)
       localStorage.setItem("token",response.data.token)
-      window.location.reload();
+      if(response.success){
+        window.location.href="http://localhost:4200/";
+      }
     })
   }
 }

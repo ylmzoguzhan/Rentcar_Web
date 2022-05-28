@@ -36,9 +36,10 @@ export class PayComponent implements OnInit {
         this.user = response.data
       })
     }
-    
   }
-
+  tikla(){
+    console.log("çalıştı")
+  }
   pay(){
     if(this.selectCar!=null){
     this.rentModel.carId = this.selectCar.id

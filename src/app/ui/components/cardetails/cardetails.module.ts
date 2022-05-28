@@ -18,7 +18,7 @@ import { AgmCoreModule } from '@agm/core';
     MatButtonModule,
     MatListModule,
     AgmCoreModule.forRoot({
-      apiKey: ' ',
+      apiKey: ' AIzaSyBgrnOWoVT4Skhe1Ik5L8v9B3JREsRbb8w',
     })
   ],
   exports:[

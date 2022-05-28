@@ -17,7 +17,7 @@ import { AgmCoreModule } from '@agm/core';
     ]),
     NgxFileDropModule,
     AgmCoreModule.forRoot({
-      apiKey: ' ',
+      apiKey: 'AIzaSyBgrnOWoVT4Skhe1Ik5L8v9B3JREsRbb8w',
     })
   ],
   exports:[
