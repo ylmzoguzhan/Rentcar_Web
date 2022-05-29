@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarDetailsModel } from 'src/app/models/carDetailsModel';
 import { carImageModel } from 'src/app/models/carImageModel';
 import { CarModel } from 'src/app/models/carModel';
 import { CarImageService } from 'src/app/services/car-image.service';
@@ -14,6 +15,7 @@ export class CardetailsComponent implements OnInit {
   images:carImageModel[]
   lat:number
   lng:number
+  carDetail:CarDetailsModel
   constructor(private carService:CarService,private imageServer:CarImageService) { }
 
   ngOnInit(): void {
@@ -23,6 +25,9 @@ export class CardetailsComponent implements OnInit {
       this.lat = this.selectCar.lat
       this.lng = this.selectCar.lng
       this.getImages(response.data.id)
+      this.carService.getCarDetailsByCarId(carId).subscribe(response=>{
+        this.carDetail = response.data
+      })
     })
   }
   

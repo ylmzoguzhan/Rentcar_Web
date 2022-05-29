@@ -1,14 +1,12 @@
 <div *ngIf="selectCar">
     <mat-list role="list" >
-        <mat-list-item role="listitem">{{selectCar.brandId}}</mat-list-item>
+        <mat-list-item role="listitem">{{carDetail.brand}}</mat-list-item>
         <mat-list-item role="listitem">{{selectCar.model}}</mat-list-item>
         <mat-list-item role="listitem">Günlük Ücret: {{selectCar.dailyPrice}}</mat-list-item>
       </mat-list>
 </div>
 
-<ul>
-    <li *ngFor="let image of images"><img [src]="newPath(image)" alt=""></li>
-</ul>
+
 
 Konum
 <button mat-stroked-button color="primary" (click)="rent()" routerLink="/pay" class="rent">Kirala</button>

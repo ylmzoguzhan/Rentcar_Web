@@ -20,8 +20,6 @@ export class CardetailsComponent implements OnInit {
   carImages:carImageModel[]
   lat:number
   lng:number 
-  public files: NgxFileDropEntry[] = [];
-  addImage:CarImageAddModel[]
   coords:CoordModel[]
   show=false
   isRent =false

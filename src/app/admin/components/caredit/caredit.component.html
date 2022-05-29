@@ -1,5 +1,15 @@
+<p *ngIf="carDetail">{{carDetail.model}}</p>
+<p *ngIf="carDetail.rent==false">Kirada değil</p>
+<p *ngIf="carDetail.rent==true">Kirada</p>
+<ul *ngIf="carImages">
+    <li  *ngFor="let image of carImages"><img [src]="newPath(image)" alt=""></li>
+</ul>
+
+
+
+
 <input type="file" (change)="deneme($event)">
 
-<button (click)="upload()">tıkla</button>
-          
-  
+<div *ngIf="currentFile">
+<a (click)="upload()">tıkla</a>
+</div>

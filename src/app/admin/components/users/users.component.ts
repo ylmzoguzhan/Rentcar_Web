@@ -21,5 +21,9 @@ export class UsersComponent implements OnInit {
       this.users = response.data
     })
   }
-
+  delete(user:UserModel){
+    this.userService.delete(user).subscribe(response=>{
+      console.log(response)
+    })
+  }
 }

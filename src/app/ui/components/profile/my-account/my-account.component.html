@@ -1,3 +1,24 @@
 <div *ngIf="user">
-    {{user.firstName}}
+
+    Ad: {{user.firstName}}
+    <br>
+    Soyad: {{user.lastName}}
+    <br> 
+    Telefon: {{user.telNo}}
+    <br>
+    TC: {{user.tc}}
+</div>
+<div class="change">
+<label for="name">Ad</label>
+<br>
+<input type="text"   [(ngModel)]="user.firstName" id="name">
+<br>
+<label for="lastName">Soyad</label>
+<br>
+<input type="text" [(ngModel)]="user.lastName" id="lastName">
+<br>
+<label for="telNo">Telefon</label>
+<br>
+<input type="text" [(ngModel)]="user.telNo" id="telNo">
+<button (click)="update()">Güncelle</button>
 </div>

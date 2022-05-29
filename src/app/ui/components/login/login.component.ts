@@ -1,8 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { gercekTokenModel } from 'src/app/models/gercekTokenModel';
 import { LoginModel } from 'src/app/models/loginModel';
 import { AuthService } from 'src/app/services/auth.service';
+import jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-login',
@@ -23,11 +25,29 @@ export class LoginComponent implements OnInit {
   login(){
     this.authService.login(this.loginModel).subscribe(response=>{
       localStorage.setItem("tc",this.loginModel.tc)
-      console.log(response)
       localStorage.setItem("token",response.data.token)
-      if(response.success){
-        window.location.href="http://localhost:4200/";
+        //window.location.href="http://localhost:4200/";
+        let test = response.data.token
+        if(test){
+          let obj:gercekTokenModel = jwt_decode(test);
+          if(obj.roles){
+            if(obj.roles.toString()=="Admin")
+           window.location.href="http://localhost:4200/admin/cars";
+          }else{
+            window.location.href="http://localhost:4200/";
+          }
+        }
+       
       }
-    })
+    
+    
+    
+    
+    
+    
+    
+    
+      )}
   }
-}
+
+

@@ -9,6 +9,7 @@ import {MatListModule} from '@angular/material/list';
 import { MyRentsComponent } from './my-rents/my-rents.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { RightComponent } from './right/right.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -24,7 +25,8 @@ import { RightComponent } from './right/right.component';
     MatCardModule,
     MatDividerModule,
     MatGridListModule,
-    MatListModule
+    MatListModule,
+    FormsModule
   ],
   exports:[
     ProfileComponent,

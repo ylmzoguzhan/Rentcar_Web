@@ -8,7 +8,7 @@ import { UsersModule } from './users/users.module';
 import { CardetailsModule } from './cardetails/cardetails.module';
 import { CareditComponent } from './caredit/caredit.component';
 import { CareditModule } from './caredit/caredit.module';
-
+import { AddcarModule } from './addcar/addcar.module';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { CareditModule } from './caredit/caredit.module';
     CarsModule,
     UsersModule,
     CardetailsModule,
-    CareditModule
+    CareditModule,
+    AddcarModule
   ],
   exports:[
     RentsModule,
@@ -28,7 +29,8 @@ import { CareditModule } from './caredit/caredit.module';
     CarsModule,
     UsersModule,
     CardetailsModule,
-    CareditModule
+    CareditModule,
+    AddcarModule
   ]
 })
 export class ComponentsModule { }

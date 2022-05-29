@@ -11,5 +11,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  exit(){
+    localStorage.clear()
+    window.location.href="http://localhost:4200/login";
+  }
 }

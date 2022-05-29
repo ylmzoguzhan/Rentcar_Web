@@ -1,5 +1,4 @@
-export interface CarModel {
-    id: number;
+export interface AddCarModel {
     brandId: number;
     model: string;
     year: number;

@@ -1,21 +1,20 @@
-<div class="container">
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Ad</th>
-        <th>Soyad</th>
-        <th>Tc</th>
-        <th>Tel</th>
-        <th></th>
-
-    </tr>
-    <tr *ngFor="let user of users">
-        <td>{{user.id}}</td>
-        <td>{{user.firstName}}</td>
-        <td>{{user.lastName}}</td>
-        <td>{{user.tc}}</td>
-        <td>{{user.telNo}}</td>
-        <td><button>Sil</button></td>
-    </tr>
-</table>
-</div>
+<table class="content-table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Tc</th>
+            <th>Tel</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.tc}}</td>
+            <td>{{user.telNo}}</td>
+        </tr>
+    </tbody>
+  </table>

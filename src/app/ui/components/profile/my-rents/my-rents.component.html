@@ -1,14 +1,24 @@
-<table>
-    <tr>
-        <th>Model</th>
-        <th>Kiralama tarihi</th>
-        <th>Kiralama bitiş tarihi</th>
-        <th>Ücret</th>
-    </tr>
-    <tr *ngFor="let rent of myRents ">
-        <td>{{rent.model}}</td>
-        <td>{{rent.rentDate}}</td>
-        <td>{{rent.returnDate}}</td>
-        <td>{{rent.price}}</td>
-</tr>
-</table>
+<div *ngIf="myRents.length>0">
+    <table class="content-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Kialama Tarihi</th>
+            <th>Kiralama Bitiş</th>
+            <th>Ücret</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rent of myRents">
+            <td>{{rent.model}}</td>
+            <td>{{rent.rentDate}}</td>
+            <td>{{rent.returnDate}}</td>
+            <td>{{rent.price}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div *ngIf="myRents.length==0">
+    Kiralama yok
+</div>
+

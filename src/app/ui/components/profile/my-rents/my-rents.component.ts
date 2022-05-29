@@ -29,12 +29,14 @@ export class MyRentsComponent implements OnInit {
   getUser(){
     this.userService.getByTc(this.tc).subscribe(response=>{
       this.getMyRents(response.data.id)
+      
     })
   }
   getMyRents(id:number){
     
     this.rentService.getAllDetailsByUserId(id).subscribe(response=>{
       this.myRents = response.data
+      
     })
   }
 

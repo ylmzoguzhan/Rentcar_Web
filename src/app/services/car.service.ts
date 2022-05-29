@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { AddCarModel } from '../models/addCarModel';
 import { CarDetailsModel } from '../models/carDetailsModel';
 import { CarModel } from '../models/carModel';
 import { ListResponseModel } from '../models/listResponseModel';
 import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
+import { UserModel } from '../models/userModel';
 
 @Injectable({
   providedIn: 'root'
@@ -34,4 +36,13 @@ export class CarService {
     let newPath = this.apiUrl+"update"
     return this.httpClient.post<ResponseModel>(newPath,car)
   }
+  getCarDetailsByCarId(id:number):Observable<SingleResponseModel<CarDetailsModel>>{
+    let newPath = this.apiUrl+"GetCarDetailsByCarId?id="+id
+    return this.httpClient.get<SingleResponseModel<CarDetailsModel>>(newPath);
+  }
+  add(car:AddCarModel):Observable<ResponseModel>{
+    let newPath = this.apiUrl+"add"
+    return this.httpClient.post<ResponseModel>(newPath,car);
+  }
+
 }

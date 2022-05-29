@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListResponseModel } from '../models/listResponseModel';
+import { ResponseModel } from '../models/responseModel';
 import { SingleResponseModel } from '../models/singleResponseModel';
 import { UserModel } from '../models/userModel';
 
@@ -19,5 +20,13 @@ export class UserService {
   getByTc(tc:string):Observable<SingleResponseModel<UserModel>>{
     let newPath= this.apiUrl+"getbytc?tc="+tc;
     return this.httpClient.get<SingleResponseModel<UserModel>>(newPath)
+  }
+  delete(user:UserModel):Observable<ResponseModel>{
+    let newPath = this.apiUrl+"delete";
+    return this.httpClient.post<ResponseModel>(newPath,user);
+  }
+  update(user:UserModel):Observable<ResponseModel>{
+    let newPath = this.apiUrl+"update"
+    return this.httpClient.post<ResponseModel>(newPath,user);
   }
 }

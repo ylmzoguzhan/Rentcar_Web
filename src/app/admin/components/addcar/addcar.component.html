@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="title">Araç ekle</div>
+  <div class="content">
+    <form action="#">
+      <div class="user-details">
+        <div class="input-box">
+          <select (change)="changeBrand($event)">
+            <option selected>Marka seçiniz</option>
+            <option *ngFor="let brand of brands"  >{{brand.name}}</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <input type="text" (change)="model($event)" placeholder="Model Giriniz">
+        </div>
+        <div class="input-box">
+          <input type="text"  (change)="year($event)" placeholder="yıl">
+        </div>
+        <div class="input-box">
+          <input type="text"  (change)="capacity($event)" placeholder="kapasite">
+        </div>
+        <div class="input-box">
+          <select (change)="changeGear($event)">
+            <option selected>Vites Türü</option>
+            <option *ngFor="let gear of gears">{{gear.name}}</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <input type="text" (change)="dailyPrice($event)" placeholder="günlük ücret" id="dailyPrice">
+        </div>
+        <div class="input-box">
+          <input type="text" (change)="lat($event)"  placeholder="lat">
+        </div>
+        <div class="input-box">
+          <input type="text"  (change)="lng($event)" placeholder="lng">
+        </div>
+      </div>
+      <div class="button">
+        <input  (click)="add()" value="Ekle">
+      </div>
+    </form>
+  </div>
+</div>

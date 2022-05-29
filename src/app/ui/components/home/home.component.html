@@ -4,20 +4,26 @@
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
 
-<div *ngIf="token">
-<mat-selection-list  [multiple]="false">
-    
-        <mat-list-option *ngFor="let car of cars">
-            <mat-card (click)="selectCar(car)" routerLink="/cardetails">
-                <div class="left" >
-                    {{car.brand}}
-                    {{car.model}}
-                </div>
-                <div class="right">
-                    Günlük ücret: {{car.dailyPrice}}
-                </div>
-            </mat-card>
-        </mat-list-option>
 
-</mat-selection-list>
-</div>
+
+<!-- ----------------------------------- -->
+<div *ngIf="token">
+    <table class="content-table">
+        <thead>
+          <tr>
+            <th>Marka</th>
+            <th>Model</th>
+            <th>Ücret</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{car.brand}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.dailyPrice}}</td>
+            <td> <a routerLink="/cardetails" (click)="selectCar(car)">Seç ve İncele</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
