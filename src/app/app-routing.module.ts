@@ -19,6 +19,7 @@ const routes: Routes = [
         {path:"cars", loadChildren: ()=> import("./admin/components/cars/cars.module").then(module=>module.CarsModule)},
         {path:"users", loadChildren: ()=> import("./admin/components/users/users.module").then(module=>module.UsersModule)},
         {path:"cardetails", loadChildren: ()=> import("./admin/components/cardetails/cardetails.module").then(module=>module.CardetailsModule)},
+        {path:"caredit", loadChildren: ()=> import("./admin/components/caredit/caredit.module").then(module=>module.CareditModule)},
       ]
   },
    

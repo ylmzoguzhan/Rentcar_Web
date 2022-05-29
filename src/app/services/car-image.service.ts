@@ -23,10 +23,11 @@ export class CarImageService {
   getPathByCarId(carId:number):Observable<ListResponseModel<carImageModel>>{
     return this.httpClient.get<ListResponseModel<carImageModel>>(this.apiUrl+"getpathbycarid"+carId)
   }
-  add(image:File, carId:number):Observable<ResponseModel>{
+  uploadImage(image: File, carId: number): Observable<ResponseModel> {
+    let newPath = this.apiUrl + "add"
     const sendForm = new FormData();
     sendForm.append('carId', JSON.stringify(carId))
-    sendForm.append('carImage', image, image.name)
-    return this.httpClient.post<ResponseModel>(this.apiUrl+"add",sendForm);
+    sendForm.append('file', image, image.name)
+    return this.httpClient.post<ResponseModel>(newPath, sendForm);
   }
 }

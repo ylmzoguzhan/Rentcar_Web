@@ -45,5 +45,8 @@ export class CarsComponent implements OnInit {
   carIdSetLocal(id:number){
     localStorage.setItem("detailadmincar",id.toString())
   }
+  carEditIdSetLocal(id:number){
+    localStorage.setItem("detailadmincaredit",id.toString())
+  }
 
 }

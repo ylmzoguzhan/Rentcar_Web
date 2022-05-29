@@ -6,6 +6,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { CarsModule } from './cars/cars.module';
 import { UsersModule } from './users/users.module';
 import { CardetailsModule } from './cardetails/cardetails.module';
+import { CareditComponent } from './caredit/caredit.component';
+import { CareditModule } from './caredit/caredit.module';
 
 
 
@@ -17,14 +19,16 @@ import { CardetailsModule } from './cardetails/cardetails.module';
     DashboardModule,
     CarsModule,
     UsersModule,
-    CardetailsModule
+    CardetailsModule,
+    CareditModule
   ],
   exports:[
     RentsModule,
     DashboardModule,
     CarsModule,
     UsersModule,
-    CardetailsModule
+    CardetailsModule,
+    CareditModule
   ]
 })
 export class ComponentsModule { }
